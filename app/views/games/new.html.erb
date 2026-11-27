@@ -1,0 +1,9 @@
+<h1>Longest word</h1>
+<p>Make the longest English word you can from these letters:</p>
+<p class="letters"><%= @letters.join(" ") %></p>
+
+<%= form_tag score_path do %>
+  <%= hidden_field_tag :letters, @letters.join(" ") %>
+  <%= text_field_tag :word, nil, placeholder: "Your word", autofocus: true %>
+  <%= submit_tag "Play" %>
+<% end %>
